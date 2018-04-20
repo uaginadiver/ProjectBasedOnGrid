@@ -1,0 +1,305 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+body{font-size: 2em;
+margin:0;
+padding: 0;
+ background-image:url(../img/puma.jpg);
+background-size: cover;
+
+background-attachment: fixed;
+
+}
+
+
+
+.container
+{display: grid;
+grid-template-columns: 18% 10px 60% 10px auto;
+grid-template-rows: 124px 10px 240px 10px 600px 10px 50px 10px 400px;}
+
+.header
+{
+
+position: fixed;
+width:auto;
+margin-left:25%;
+padding-left: 30px;
+
+
+
+}
+
+
+
+.main
+{
+grid-column-start: 3;
+grid-column-end: 4;
+  grid-row-start:3;
+  grid-row-end:8;
+  background:white;
+}
+
+.sidebar
+{padding:14px;
+margin-right:10px;}
+.sidebar-1
+{grid-column-start: 5;
+grid-column-end: 6;
+grid-row-start: 3;
+grid-row-end: 4;
+background: black;
+}
+
+.sidebar-1 span
+{color:white;
+font-size:13px;
+}
+
+.sidebar-1 a
+{text-decoration: none;
+color: inherit;}
+
+.sidebar-2
+{grid-column-start: 5;
+grid-column-end:6;
+grid-row-start: 5;
+grid-row-end: 6;
+background: #ff4d00;}
+
+.sidebar-3
+{grid-column-start: 5;
+grid-column-end: 6;
+grid-row-start: 7;
+grid-row-end: 8;
+background: black;}
+
+.footer
+{
+display: grid;
+grid-column-start: 1;
+grid-column-end: 6;
+grid-row-start: 9;
+grid-row-end:10;
+background: #ffd800;
+padding:20px;
+grid-template-columns:33% 33% 33%;
+}
+
+.footangle
+{
+  margin-right:10px;
+  height:90%;
+  background: red;
+  transform: rotate(-3deg);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.footangle:nth-child(1)
+{background:green;}
+
+.footangle:nth-child(1)
+{background:green;}
+
+
+#menul
+{font-size: 1em;
+display: flex;
+list-style: none;
+margin-top:10px;
+margin-bottom: 0;
+}
+
+.submenuDiv
+{position: absolute;
+left: 0;
+top:110%;
+display: none;
+flex: none;
+padding-top: 10px;
+padding-bottom: 10px;
+background: rgba(248,243, 43, 0.7);
+padding-right: 15px;
+margin-top: 0;
+ }
+
+
+.submenuDiv ul
+{list-style: none;
+text-transform: capitalize;
+font-size: 25px;
+margin: 0;
+padding-right: 5px;
+padding-left: 10px;}
+
+.header a{text-decoration: none;
+margin-left: 10px;
+color:#082567;
+text-transform: capitalize;
+position: relative;
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+
+.header a::after
+{
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  height: 3px;
+  width:20px;
+  top:105%;
+  transition: .5s;
+  background: #ffd800;
+  mix-blend-mode:multiply;
+right:0;}
+
+.header a::before
+{content: "";
+position: absolute;
+visibility: hidden;
+height: 3px;
+width:20px;
+top:105%;
+transition: .5s;
+background: #ff4d00;
+mix-blend-mode:multiply;
+left:0;
+}
+
+
+.header li:hover a::before
+{
+transform: translateX(100%);
+visibility: visible;
+width: 50%;
+
+}
+
+.header li:hover a::after
+{
+transform: translateX(-100%);
+visibility: visible;
+width: 50%;}
+
+.subr
+{float: left;
+border-right:solid red 1px;
+padding-right: 10px;}
+
+.subl
+{float: right;}
+
+#subm0
+{left:-10px;}
+
+#subm1
+{left:70px;}
+
+#subm2
+{left:165px;}
+
+#subm3
+{left:275px;}
+
+#subm4
+{left: 460px;}
+
+
+
+
+
+#regmodal:target
+{visibility: visible;
+  width: 100%;
+  height: 100%;
+  background:rgba(127,118,121,0.4);
+  display:block;
+  position: fixed;
+  top:0;
+  left: 0;
+  text-align: center;
+  transition: linear .1s;
+  opacity: 1;
+}
+
+#regmodal:not(:target)
+{
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+transition: linear .1s;
+
+}
+
+
+
+.modalcont
+{
+  margin-top: 69px;
+  padding-top: 10px;
+  background: white;
+  display: inline-block;
+  padding-left:16px;
+  padding-right: 16px;
+ text-align: left;
+}
+
+.modalcont a
+{text-decoration: none;
+color: inherit;}
+
+.modalcont label
+{font-size:16px;
+ text-align: left;
+margin:5px;
+margin-bottom:40px;
+padding: 0;
+color:black;
+position: relative;
+}
+
+#password
+{margin-top:130px;}
+
+.modalcont input, select
+{margin:5px;
+margin-top:0px;
+margin-bottom: 12px;
+font-size:20px;
+width:300px;}
+
+ #mail
+{margin-bottom:3px;}
+
+p{font-size:3px;}
+
+select
+{
+  margin-left:5px;
+  width:145px;}
+
+select:first-child
+{margin-right:10px;}
+
+.forlabelp
+{font-size:0;
+margin: 0;
+padding:0;
+line-height: 0;
+}
+
+.mark
+{color:red;
+font-size:8px;
+position: absolute;
+top:5px;
+right:-5px;
+}
+.ficons
+{font-size:13px;
+margin-left:5px;
+color:red;
+opacity: 0.5}
